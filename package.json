@@ -1,0 +1,44 @@
+{
+  "name": "nuxt-scss-to-js",
+  "version": "0.0.0",
+  "description": "Load SCSS Variables into Nuxt instance for use in Templates/Scripts.",
+  "repository": "",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "sugoidesune <timar003@gmail.com>"
+    }
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/module.js",
+  "scripts": {
+    "dev": "nuxt example",
+    "lint": "eslint --ext .js,.vue .",
+    "fix": "eslint --fix --ext .js,.vue .",
+    "release": "npm test && standard-version && git push --follow-tags && npm publish",
+    "test": "npm run lint && jest"
+  },
+  "dependencies": {
+    "scss-to-json": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/module-test-utils": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest",
+    "standard-version": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
