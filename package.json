@@ -1,10 +1,10 @@
 {
   "name": "nuxt-scss-to-js",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Load SCSS Variables into Nuxt instance for use in Templates/Scripts.",
-  "repository":{
-    "type" : "git",
-    "url":"https://github.com/sugoidesune/nuxt-scss-to-js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sugoidesune/nuxt-scss-to-js"
   },
   "license": "MIT",
   "contributors": [
@@ -44,5 +44,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["nuxt", "nuxtjs", "vue", "scss", "tailwind", "bootstrap", "vuetify", "material", "svg", "theme", "json"]
+  "keywords": [
+    "nuxt",
+    "nuxtjs",
+    "vue",
+    "scss",
+    "tailwind",
+    "bootstrap",
+    "vuetify",
+    "material",
+    "svg",
+    "theme",
+    "json"
+  ]
 }
