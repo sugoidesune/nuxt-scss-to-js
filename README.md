@@ -34,7 +34,7 @@ $warning: #ff0000;
 yarn add nuxt-scss-to-js # or npm install nuxt-scss-to-js
 ```
 
-2. Add `nuxt-scss-to-js` to the `modules` section of `nuxt.config.js`
+2. Add `nuxt-scss-to-js` to the `buildModules` section of `nuxt.config.js`
 
 ```js
 {
