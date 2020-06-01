@@ -43,7 +43,7 @@ yarn add nuxt-scss-to-js # or npm install nuxt-scss-to-js
     'nuxt-scss-to-js',
 
     // With options
-    ['nuxt-scss-to-js', { /* module options */ }]
+    ['nuxtScssToJs', { /* module options */ }]
   ]
 }
 ```
@@ -68,14 +68,44 @@ $scss.warning // '#ff0000'
 The path to your scss file with variables.
 
 
+### `generate`
+- Type: `Boolean`
+- Default: false
+
+Will generate a `scss.js` file in the same directory as `path`.
+This file can be used to explicitly import scss variables. Useful for work with other plugins/modules.
+**Name of file depends namespace option**
+
+**Result**
+```dir
+//path directory
+
+variables.scss
+scss.js
+```
+**Use**
+```js
+import variables from '~/assets/scss/scss.js'
+```
+
+
+
 ### Possible Options:
 ```js
 //defaults
 {
   namespace: 'scss', //default
   path: '~/asstets/scss/variables.scss' //default
+  generate: false
 }
 ```
+
+### `inject`
+- Type: `Boolean`
+- Default: true
+
+By default the vue instance will be injected with the $scss object containing all scss variables.
+This can be turned off. Useful in conjuntion with the option `generate`, to only import variables where necessary.
 
 
 

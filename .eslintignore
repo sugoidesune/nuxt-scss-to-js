@@ -4,6 +4,9 @@ dist
 .nuxt
 coverage
 
+.eslintrc.js
 
 # Plugin
 lib/plugin.js
+lib/scss.js
+/example/assets/scss/scss.js

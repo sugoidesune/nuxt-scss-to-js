@@ -13,6 +13,7 @@ describe('module', () => {
 
   test('render', async () => {
     const html = await get('/')
-    expect(html).toContain('SCSS')
+    expect(html).toContain('INJECTED')
+    expect(html).toContain('EXPORTED')
   })
 })
