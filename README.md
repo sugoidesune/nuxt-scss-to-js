@@ -38,7 +38,7 @@ yarn add nuxt-scss-to-js # or npm install nuxt-scss-to-js
 
 ```js
 {
-  modules: [
+  buildModules: [
     // Simple usage
     'nuxt-scss-to-js',
 
@@ -88,24 +88,60 @@ scss.js
 import variables from '~/assets/scss/scss.js'
 ```
 
-
-
-### Possible Options:
-```js
-//defaults
-{
-  namespace: 'scss', //default
-  path: '~/asstets/scss/variables.scss' //default
-  generate: false
-}
-```
-
 ### `inject`
 - Type: `Boolean`
 - Default: true
 
 By default the vue instance will be injected with the $scss object containing all scss variables.
 This can be turned off. Useful in conjuntion with the option `generate`, to only import variables where necessary.
+
+
+## Examples:
+### Example Default Settings
+```js
+// nuxt.config.js
+buildModules: [
+  'nuxt-scss-to-js'
+]
+```
+```scss
+//   /assets/scss/variables.scss
+$primary: #0000ff;
+```
+```html
+<template>
+  This themes primary color is {{$scss.primary}}!
+  <Component :color="$scss.primary"/>
+</template>
+```
+
+### Example with Generate and Namespace
+
+```js
+// nuxt.config.js
+buildModules: [
+'nuxt-scss-to-js',
+  {
+    generate: true,
+    namespace: 'fancyColors'
+  }
+]
+```
+
+```html
+<template>
+  Use imported {{colors.primary}} or injected {{$fancyColors.primary}}!
+</template>
+<script>
+import colors from '~/assets/scss/fancyColors.js'
+export default {
+  data(){return{
+    colors
+  }}
+
+}
+</script>
+```
 
 
 
